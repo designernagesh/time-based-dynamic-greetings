@@ -8,15 +8,13 @@ function App() {
 
   useEffect(() => {
     if (currentHours >= 5 && currentHours < 12) {
-      setMessage('Good Morning!')
+      setMessage('Good Morning!');
+    } else if (currentHours >= 12 && currentHours < 19) {
+      setMessage('Good Afternoon!');
+    } else {
+      setMessage('Good Night!');
     }
-    else if (currentHours >= 12 && currentHours < 19) {
-      setMessage('Good Afternoon!')
-    }
-    else if (currentHours > 19) {
-      setMessage('Good Night!')
-    }
-  }, [])
+  }, [currentHours])
 
   return (
     <>
